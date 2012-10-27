@@ -27,7 +27,7 @@ echo '<li><a class="menuImport" href="'.Atomik::url('import').'"><span>Importer 
 <?php 
 foreach (A('flash:all') as $label => $messages){ 
 	foreach ($messages as $message){
-		echo '<li class="'.$label'.">'.$message.'</li>';
+		echo '<li class="'.$label.'">'.$message.'</li>';
 	}
 }
 ?>
