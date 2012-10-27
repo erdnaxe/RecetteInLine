@@ -1,0 +1,124 @@
+*{margin:0;padding:0;}
+body{
+	font-size:14px;
+	color:#666;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#content{
+	margin-left:60px;
+}
+/*-----------------------------------------------------------------------------------*/
+/*----------------------       MENU DE GAUCHE         --------------------------*/
+/*-----------------------------------------------------------------------------------*/
+#navigationMenu li{	
+	list-style:none;
+	margin:2px;
+	height:48px;
+	width:48px;
+}
+#navigationMenu span{
+	width:0; 
+	left:51px; 
+	position:absolute;
+	overflow:hidden;
+	font-family:'Myriad Pro',Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	letter-spacing:0.6px;
+	white-space:nowrap;
+	line-height:48px;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	transition: 0.25s;
+}
+#navigationMenu a{
+	background-repeat:no-repeat;
+	height:48px;
+	width:48px;
+	display:block;
+	position:relative;
+}
+#navigationMenu a:hover span{ 
+	width:auto; 
+	padding:0 20px;
+	overflow:visible; 
+}
+#navigationMenu a:hover{ text-decoration:none; }
+#navigationMenu span{background-color:#1e8bb4;color:#223a44;text-shadow:1px 1px 0 #44a8d0;}
+#navigationMenu .menuAccueil{background-image:url('../images/menuAccueil.png');}
+#navigationMenu .menuTB{background-image:url('../images/menuTB.png');}
+#navigationMenu .menuEditeur{background-image:url('../images/menuEditeur.png');}
+#navigationMenu .menuImport{background-image:url('../images/menuImport.png');}
+div#menu { 
+	float:left; 
+	background-color:rgb(0,162,231);
+	border-width:1px;
+	border-style:solid;
+	border-color:black;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*----------------------             MENU FAST             --------------------------*/
+/*-----------------------------------------------------------------------------------*/
+.table{
+	position: absolute;
+	top: 30%;
+	width:100%;
+}
+.fastAdd,.fastImp,.fastTB{
+	position: absolute;
+	border: 1px solid #1E796A;
+	color:#ffffff;
+	font-weight:bold;
+	display: inline; 
+	margin:5px;
+	padding:5px;
+	height:200px;
+	background:no-repeat right;
+}
+.fastAdd{
+	right: 50%;
+	width:200px;
+	background-image:url("../images/fastAdd.png");
+	background-color:rgb(4,174,218);
+}
+.fastImp{
+	left:50%;
+	width:200px;
+	background-image:url("../images/fastImp.png");
+	background-color:rgb(37,100,169);
+}
+.fastTB{
+	top:220px;
+	left:50%;
+	margin-left:-217px;
+	width:422px;
+	background-image:url("../images/fastTB.png");
+	background-color:rgb(4,174,218);
+}
+
+fieldset{
+	border-color:orange;
+	padding:5px;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*----------------------                  TB                      --------------------------*/
+/*-----------------------------------------------------------------------------------*/
+.TB{
+	list-style-position:inside;
+	padding-left: 20px;
+}
+.dir1, .dir2{
+	margin-left:12px;
+}
+.TB a{
+	color:#555;
+	text-decoration:none;
+}
+.suppr{
+	float: left;
+	height:15px;
+	width:15px;
+	background-image:url("../images/delete.png");
+}
