@@ -2,34 +2,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title><?php echo A('title', 'Recette Revolution') ?></title>
-		<?php foreach (A('styles', array()) as $style): ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo Atomik::appAsset($style) ?>" />
-		<?php endforeach; ?>
-		<?php foreach (A('scripts', array()) as $script): ?>
-		<script type="text/javascript" src="<?php echo Atomik::appAsset($script) ?>"></script>
-		<?php endforeach; ?>
+		<title><?php echo A('title', 'Recette en ligne') ?></title>
+<?php
+foreach (A('styles', array()) as $style){
+	echo '<link rel="stylesheet" type="text/css" href="'.Atomik::appAsset($style).'" />';
+}
+foreach (A('scripts', array()) as $script){
+	echo '<script type="text/javascript" src="'.Atomik::appAsset($script).'"></script>';
+}
+?>
 	</head>
 	<body>
 		<div id="menu">
 			<ul id="navigationMenu">
-			<?php
-				echo '<li><a class="menuAccueil" href="index.php"><span>Accueil</span></a></li>';
-				echo '<li><a class="menuTB" href="'.Atomik::url('TB').'"><span>Table des matières</span></a></li>';
-				echo '<li><a class="menuEditeur" href="'.Atomik::url('editeur').'"><span>Ajouter une recette</span></a></li>';
-				echo '<li><a class="menuImport" href="'.Atomik::url('import').'"><span>Importer de word</span></a></li>';
-			?>
+<?php
+echo '<li><a class="menuAccueil" href="index.php"><span>Accueil</span></a></li>';
+echo '<li><a class="menuTB" href="'.Atomik::url('TB').'"><span>Table des mati&agrave;res</span></a></li>';
+echo '<li><a class="menuEditeur" href="'.Atomik::url('editeur').'"><span>Ajouter une recette</span></a></li>';
+echo '<li><a class="menuImport" href="'.Atomik::url('import').'"><span>Importer de word</span></a></li>';
+?>
 			</ul>
 		</div>
 		<ul id="messages">
-			<?php foreach (A('flash:all') as $label => $messages): ?>
-				<?php foreach ($messages as $message): ?>
-					<li class="<?php echo $label ?>"><?php echo $message ?></li>
-				<?php endforeach; ?>
-			<?php endforeach; ?>
+<?php 
+foreach (A('flash:all') as $label => $messages){ 
+	foreach ($messages as $message){
+		echo '<li class="'.$label'.">'.$message.'</li>';
+	}
+}
+?>
 		</ul>
-		<div id="content">
-			<?php echo $contentForLayout; ?>
-		</div>
+		<div id="content"><?php echo $contentForLayout; ?></div>
 	</body>
 </html>
