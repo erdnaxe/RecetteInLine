@@ -39,6 +39,6 @@ function explore($dir, $nv="dir1"){
 	return $tmp;
 }
 ?>
-<h1>Table des matières</h1>
-<a href="#">Imprimer la table des matières</a><br/><br/>
+<h1>Table des mati&egrave;res</h1>
+<a href="#">Imprimer la table des mati&egrave;res</a><br/><br/>
 <ul class="TB"><?php echo explore("recettes"); ?></ul>
