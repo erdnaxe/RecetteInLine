@@ -1,5 +1,15 @@
 <?php
+
 Atomik::set(array(
-	'app/layout' => '_layout',
-	'styles' => array('assets/css/main.css')
+
+    'plugins' => array(
+        'Errors' => array(
+            'catch_errors' => true
+        ),
+        'Session',
+        'Flash'
+    ),
+
+    'app.layout' => '_layout'
+    
 ));
