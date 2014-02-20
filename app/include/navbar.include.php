@@ -11,13 +11,6 @@ if (!isset($main_loaded)) {
     header('Location: /');
     exit;
 }
-
-/* Old navigation
-  echo '<li><a class="menuAccueil" href="index.php"><span>Accueil</span></a></li>';
-  echo '<li><a class="menuTB" href="' . Atomik::url('TB') . '"><span>Table des mati&agrave;res</span></a></li>';
-  echo '<li><a class="menuEditeur" href="' . Atomik::url('editeur') . '"><span>Ajouter une recette</span></a></li>';
-  echo '<li><a class="menuImport" href="' . Atomik::url('import') . '"><span>Importer de word</span></a></li>';
- */
 ?>
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
@@ -28,35 +21,52 @@ if (!isset($main_loaded)) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><b>Recette</b>InLine <span class="label label-warning">BETA</span></a>
+            <a class="navbar-brand" href="<?php echo Atomik::url(''); ?>">
+                <span class="glyphicon glyphicon-cutlery"></span>
+                <b>Recette</b>InLine <span class="label label-warning">BETA</span>
+            </a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Accueil</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Naviguer dans les recettes <span class="caret"></span></a>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li class="dropdown-header"><span class="badge pull-right">42</span> Catégorie 1</li>
-                        <li>
-                            <a href="#">
-                                Exemple...
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header"><span class="badge pull-right">5</span> Catégorie 2</li>
-                        <li><a href="#">Exemple...</a></li>
-                    </ul>
+                <!-- Home -->
+                <li class="active"><a href="<?php echo Atomik::url(''); ?>">Accueil</a></li>
+                
+                <!-- Recipes explorer -->
+                <li>
+                    <a href="<?php echo Atomik::url('explorer'); ?>" style="padding-right: 5px">
+                        Naviguer dans les recettes
+                    </a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nouvelle recette <span class="caret"></span></a>
+                    <a href="#" style="padding-left: 5px" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </a>
                     <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">Importer à partir de word</a></li>
+                        <li class="dropdown-header"><span class="badge pull-right">42</span> Catégorie 1</li>
+                        <li><a href="<?php echo Atomik::url('viewer'); ?>">Exemple...</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Autre...</a></li>
+                        <li class="dropdown-header"><span class="badge pull-right">5</span> Catégorie 2</li>
+                        <li><a href="<?php echo Atomik::url('viewer'); ?>">Exemple...</a></li>
+                    </ul>
+                </li>
+
+                <!-- New recipes -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Nouvelle recette <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li class="dropdown-header">Nouvelle recette</li>
+                        <li><a href="<?php echo Atomik::url('newRecipes'); ?>">&Agrave; partir d'un modèle vierge</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Importation</li>
+                        <li><a href="<?php echo Atomik::url('importWord'); ?>">Importer à partir de word</a></li>
                     </ul>
                 </li>
             </ul>
-            <form class="navbar-form navbar-right" role="search">
+            
+            <!-- Search form -->
+            <form class="navbar-form navbar-right" role="search" method="GET" action="<?php echo Atomik::url('search'); ?>">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Rechercher">
                     <span class="input-group-btn">
