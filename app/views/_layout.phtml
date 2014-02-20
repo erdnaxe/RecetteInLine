@@ -1,37 +1,77 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title><?php echo A('title', 'Recette en ligne') ?></title>
 <?php
-foreach (A('styles', array()) as $style){
-	echo '<link rel="stylesheet" type="text/css" href="'.Atomik::appAsset($style).'" />';
-}
-foreach (A('scripts', array()) as $script){
-	echo '<script type="text/javascript" src="'.Atomik::appAsset($script).'"></script>';
-}
+/*
+ * Layout
+ * --------------------------
+ * This code is a part of the RecetteInLIne project.
+ * He has been created by erdnaxe.
+ * This project is under GPLv2 license.
+ */
+
+// Assets directory definition
+$app_dir = "app/";
+$include_dir = $app_dir . "include/";
+
+// Internet librairies
+$glibs = "https://ajax.googleapis.com/ajax/libs/";
+$osslibs = "https://oss.maxcdn.com/libs/";
+
+// Security for includes...
+$main_loaded = "yes";
 ?>
-	</head>
-	<body>
-		<div id="menu">
-			<ul id="navigationMenu">
-<?php
-echo '<li><a class="menuAccueil" href="index.php"><span>Accueil</span></a></li>';
-echo '<li><a class="menuTB" href="'.Atomik::url('TB').'"><span>Table des mati&agrave;res</span></a></li>';
-echo '<li><a class="menuEditeur" href="'.Atomik::url('editeur').'"><span>Ajouter une recette</span></a></li>';
-echo '<li><a class="menuImport" href="'.Atomik::url('import').'"><span>Importer de word</span></a></li>';
-?>
-			</ul>
-		</div>
-		<ul id="messages">
-<?php 
-foreach (A('flash:all') as $label => $messages){ 
-	foreach ($messages as $message){
-		echo '<li class="'.$label.'">'.$message.'</li>';
-	}
-}
-?>
-		</ul>
-		<div id="content"><?php echo $contentForLayout; ?></div>
-	</body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Un utilitaire de gestion de recettes." />
+        <meta name="author" content="erdnaxe" />
+        <link href="<?php echo $this->asset('vendor/bootstrap/css/bootstrap.min.css'); ?>" rel='stylesheet' type='text/css' />
+        <link href="<?php echo $this->asset('assets/css/main.css'); ?>" rel='stylesheet' type='text/css' />
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="<?php echo $osslibs; ?>html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="<?php echo $osslibs; ?>respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <title>RecetteInLine - erdnaxe</title>
+    </head>
+    <body>
+        <?php include($include_dir . "navbar.include.php"); // NavBar ?>
+
+        <div class="container">
+
+            <!-- Location -->
+            <ol class="breadcrumb">
+                <li class="active">Accueil</li>
+            </ol>
+
+            <!-- Messages -->
+            <?php if (count($this['flash_messages'])): ?>
+                <?php foreach ($this['flash_messages'] as $label => $messages): ?>
+                    <?php foreach ($messages as $message): ?>
+                        <div class="alert alert-<?php echo $label ?>">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <?php echo $message ?>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endforeach; ?>
+            <?php endif ?>
+
+            <!-- Content -->
+            <?php echo $contentForLayout; ?>
+            
+            <!-- Footer -->
+            <footer class="well well-sm" style="text-align: center">
+                &copy; erdnaxe 2008-2014 - Propuls&eacute; par 
+                <a href="http://atomikframework.com/" title="Atomik">
+                    <img src="<?php echo $this->asset('assets/images/atomik-powered.png'); ?>" alt="Atomik" />
+                </a>
+            </footer>
+        </div>
+
+        <!-- Javascript inclusion -->
+        <script type="text/javascript" src="<?php echo $glibs; ?>jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="<?php echo $this->asset('vendor/bootstrap/js/bootstrap.min.js'); ?>"></script>
+    </body>
 </html>
