@@ -1,25 +1,34 @@
-# Bienvenu sur le git de RecetteEnLigne !
+RecetteInLine
+========
 
-## Installation
-Pour installer RecetteEnLigne sur ordinateur ou serveur vous devez disposez de :
-- Un serveur apache
-- Php 4 minimum
-- Optionel : UrlRewriting
-- Un navigateur web supportant le CSS3. Si le CSS3 n'est pas supporter, l'interface sera adapté.
+This project is created by erdnaxe : [https://github.com/erdnaxe/RecetteInLine](https://github.com/erdnaxe/RecetteInLine).
+You can make a fork and comment it to improve it.
 
-Pour avoir un serveur pré-configurer sous windows, se reporter à ces projets :
-- WAMP : http://www.wampserver.com/
-- EasyPhp : http://www.easyphp.org/
+I create this project to make an easier way to make recipes on computer.
 
-Pour avoir un serveur pré-configurer sous linux, utiliser LAMP.
+Sorry but the project is in french. A translation will come...
 
-## Configuration
-L'application nessecite que vous créez une hiéarchie dans le dossier "recettes".
-Cette hiéarchie doit représenter sous forme de dossier, les catégories et les sous-catégories où l'on placera les recettes.
+## How to use ##
+Just make your recette.
+Then, you can export it in pdf.
 
-Une fois cela fait, il suffit juste de se connecter à l'interface et vous pourrez commencer à utiliser l'application.
+## Requirements for the host ##
+* A web server: like "localhost" or a website.
+* PHP: I develop this project with the last PHP (5.5).
+* Folder listing disabled on the server (for crazy man...).
 
-## Import/Export
-Cette application n'a pas besoin de base de donnée. 
-Toutes les recettes sont stockées dans le dossier "recettes".
-Pour importer/exporter les recettes, il suffit de copier ce dossier.
+## Requirements for the client ##
+* Internet connection because of the two JQuery librairies host on Google.
+* Javascript support with a recent browser (IE 8+, chrome, firefox...).
+
+## List of the librairies used ##
+* First of all : [JQuery](http://jquery.com/).
+* [Twitter Bootstrap](http://getbootstrap.com/) (CSS and Javascript addons).
+* [Atomik Framework](http://atomikframework.com/) for easy organising.
+
+## Directory system ##
+* In "vendor": all librairies I didn't create like JQuery.
+* In "assets": all the JS, JSON, CSS and img files.
+* In "app": all the server code or content catch by the page.
+
+I apologise for my dirty english: I'm french ^^.
