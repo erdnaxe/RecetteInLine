@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ratiw\\JsonPDF' => array($vendorDir . '/ratiw/jsonpdf/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'DebugBar' => array($vendorDir . '/maximebf/debugbar/src'),
     'Atomik' => array($vendorDir . '/atomik/atomik/src'),

@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e241055a1b4c2a214eee53cc06e6b469",
+    "hash": "a944bffe3a5d95a61a4b0e2a89cc722b",
     "packages": [
         {
             "name": "atomik/atomik",
@@ -206,6 +206,47 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "ratiw/jsonpdf",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ratiw/JsonPDF.git",
+                "reference": "a5de2cb4931a2a9ab75dc9126311755723ef3035"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ratiw/JsonPDF/zipball/a5de2cb4931a2a9ab75dc9126311755723ef3035",
+                "reference": "a5de2cb4931a2a9ab75dc9126311755723ef3035",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ratiw\\JsonPDF": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rati Wannapanop",
+                    "email": "rati.wannapanop@gmail.com"
+                }
+            ],
+            "description": "JsonPDF is a wrapper class of FPDF for creating PDF using JSON data.",
+            "keywords": [
+                "fpdf",
+                "json",
+                "pdf"
+            ],
+            "time": "2013-11-23 07:59:15"
         }
     ],
     "packages-dev": [
@@ -215,9 +256,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "ratiw/jsonpdf": 20
+    },
     "platform": [
 
     ],

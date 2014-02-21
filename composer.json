@@ -10,6 +10,7 @@
     "require": {
         "atomik/skeleton": "3.1.1",
         "frameworks/bootstrap": "3.1.0",
-        "atomik/atomik": "3.1.4"
+        "atomik/atomik": "3.1.4",
+        "ratiw/jsonpdf": "dev-master"
     }
 }
