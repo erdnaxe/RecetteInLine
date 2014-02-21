@@ -21,7 +21,7 @@ if (!isset($main_loaded)) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php echo Atomik::url(''); ?>">
+            <a class="navbar-brand" href="<?php echo Atomik::url('index'); ?>">
                 <span class="glyphicon glyphicon-cutlery"></span>
                 <b>Recette</b>InLine <span class="label label-warning">BETA</span>
             </a>
@@ -29,7 +29,7 @@ if (!isset($main_loaded)) {
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <!-- Home -->
-                <li class="active"><a href="<?php echo Atomik::url(''); ?>">Accueil</a></li>
+                <li class="active"><a href="<?php echo Atomik::url('index'); ?>">Accueil</a></li>
                 
                 <!-- Recipes explorer -->
                 <li>
