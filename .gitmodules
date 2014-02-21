@@ -1,3 +1,0 @@
-[submodule "vendor/atomik/atomik"]
-	path = vendor/atomik/atomik
-	url = git://github.com/maximebf/atomik.git
