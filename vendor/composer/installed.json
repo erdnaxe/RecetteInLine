@@ -1,23 +1,197 @@
 [
     {
-        "name": "atomik/atomik",
-        "version": "3.1.2",
-        "version_normalized": "3.1.2.0",
+        "name": "psr/log",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/maximebf/atomik.git",
-            "reference": "3.1.2"
+            "url": "https://github.com/php-fig/log.git",
+            "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/maximebf/atomik/zipball/3.1.2",
-            "reference": "3.1.2",
+            "url": "https://api.github.com/repos/php-fig/log/zipball/fe0936ee26643249e916849d48e3a51d5f5e278b",
+            "reference": "fe0936ee26643249e916849d48e3a51d5f5e278b",
+            "shasum": ""
+        },
+        "time": "2012-12-21 11:40:51",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Psr\\Log\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for logging libraries",
+        "keywords": [
+            "log",
+            "psr",
+            "psr-3"
+        ]
+    },
+    {
+        "name": "maximebf/debugbar",
+        "version": "1.9.4",
+        "version_normalized": "1.9.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/maximebf/php-debugbar.git",
+            "reference": "5bbb3bc78b3e9ee0c4cc8c3619171ea16f0fb51f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/5bbb3bc78b3e9ee0c4cc8c3619171ea16f0fb51f",
+            "reference": "5bbb3bc78b3e9ee0c4cc8c3619171ea16f0fb51f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0",
+            "psr/log": "~1.0"
+        },
+        "require-dev": {
+            "php": ">=5.3.0"
+        },
+        "suggest": {
+            "kriswallsmith/assetic": "The best way to manage assets",
+            "monolog/monolog": "Log using Monolog",
+            "predis/predis": "Redis storage"
+        },
+        "time": "2014-02-14 16:30:44",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "DebugBar": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Maxime Bouroumeau-Fuseau",
+                "email": "maxime.bouroumeau@gmail.com",
+                "homepage": "http://maximebf.com"
+            }
+        ],
+        "description": "Debug bar in the browser for php application",
+        "homepage": "https://github.com/maximebf/php-debugbar",
+        "keywords": [
+            "debug"
+        ]
+    },
+    {
+        "name": "atomik/skeleton",
+        "version": "3.1.1",
+        "version_normalized": "3.1.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/maximebf/atomik-skeleton.git",
+            "reference": "ebfc84bc43207dadc0f9dfabf273c9702cc3b151"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/maximebf/atomik-skeleton/zipball/ebfc84bc43207dadc0f9dfabf273c9702cc3b151",
+            "reference": "ebfc84bc43207dadc0f9dfabf273c9702cc3b151",
+            "shasum": ""
+        },
+        "require": {
+            "atomik/atomik": "3.*",
+            "maximebf/debugbar": "1.*",
+            "php": ">=5.3.0"
+        },
+        "suggest": {
+            "kriswallsmith/assetic": "Required for the Assets plugin",
+            "maximebf/ConsoleKit": "Required for the Console plugin"
+        },
+        "time": "2013-08-13 07:16:10",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Application skeleton for Atomik Framework",
+        "homepage": "https://github.com/maximebf/atomik/skeleton"
+    },
+    {
+        "name": "frameworks/jquery",
+        "version": "2.1.0",
+        "version_normalized": "2.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/frameworks/jquery.git",
+            "reference": "50938c691a9b45bd84103f2686a69eeae2a41ed8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/frameworks/jquery/zipball/50938c691a9b45bd84103f2686a69eeae2a41ed8",
+            "reference": "50938c691a9b45bd84103f2686a69eeae2a41ed8",
+            "shasum": ""
+        },
+        "time": "2014-01-24 18:22:45",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "jQuery JavaScript Library",
+        "homepage": "http://jquery.com"
+    },
+    {
+        "name": "frameworks/bootstrap",
+        "version": "3.1.0",
+        "version_normalized": "3.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/frameworks/bootstrap.git",
+            "reference": "e86918e1818f8a3cedba7f0bb545a3c372b7b2c3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/frameworks/bootstrap/zipball/e86918e1818f8a3cedba7f0bb545a3c372b7b2c3",
+            "reference": "e86918e1818f8a3cedba7f0bb545a3c372b7b2c3",
+            "shasum": ""
+        },
+        "require": {
+            "frameworks/jquery": "*"
+        },
+        "time": "2014-01-31 14:21:01",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/"
+    },
+    {
+        "name": "atomik/atomik",
+        "version": "3.1.4",
+        "version_normalized": "3.1.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/maximebf/atomik.git",
+            "reference": "94faca10aaf0e92091e924f08dd656d785da334e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/maximebf/atomik/zipball/94faca10aaf0e92091e924f08dd656d785da334e",
+            "reference": "94faca10aaf0e92091e924f08dd656d785da334e",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.0"
         },
-        "time": "2013-07-02 11:30:05",
+        "time": "2013-08-14 14:13:39",
         "type": "framework",
         "installation-source": "dist",
         "autoload": {
