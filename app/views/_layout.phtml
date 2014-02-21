@@ -7,21 +7,21 @@
  * This project is under GPLv2 license.
  */
 
-// Security for includes...
-$main_loaded = "yes";
-
-// Internet librairies
-$glibs = "https://ajax.googleapis.com/ajax/libs/";
-
-// Page definition
+// Get the page
 if (null !== (filter_input(INPUT_GET, 'action'))) {
     $action = filter_input(INPUT_GET, 'action');
 } else {
     $action = null;
 }
 
-if ($action == "index") {
-    $action = null;
+//Language
+Atomik::needed('language');
+
+// Get the translation name of the action
+if (null !== $action) {
+    $action_name = $this->translate($action);
+} else {
+    $action_name = $this->translate("index");
 }
 ?>
 <!DOCTYPE html>
@@ -40,7 +40,7 @@ if ($action == "index") {
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <title>RecetteInLine - erdnaxe</title>
+        <title>RecetteInLine - <?php echo $this->translate($action_name); ?></title>
     </head>
     <body>
         <?php
@@ -49,11 +49,12 @@ if ($action == "index") {
         ?>
 
         <!-- Language -->
-        <?php /* Atomik\Translations::set('fr'); 
-         * $currentLanguage = Atomik::get('app.language'); 
+        <?php
+        /*
+         *  
          * echo __('hello'); // will echo bonjour
-         */ 
-        
+         */
+
         //Atomik::flash('Quelque chose à bougé !', 'error');
         ?>
 

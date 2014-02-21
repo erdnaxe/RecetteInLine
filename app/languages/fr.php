@@ -7,7 +7,20 @@
  * This project is under GPLv2 license.
  */
 
+/*
+ * Page list
+ */
 Atomik\Translations::setMessages(array(
-    'hello' => 'bonjour',
-    'how are you?' => 'comment ca va?'
+    'index' => 'Accueil',
+    'explore' => 'Explorer',
+    'newRecipes' => 'Nouvelle recette',
+    'importWord' => 'Importer à partir de Word'
+));
+
+/*
+ * NavBar
+ */
+Atomik\Translations::setMessages(array(
+    'Import' => 'Importer',
+    'Search' => 'Rechercher'
 ));

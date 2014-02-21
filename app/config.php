@@ -11,6 +11,7 @@ Atomik::set(array(
         'Errors' => array(
             'catch_errors' => true
         ),
+        'Translations',
         'Session',
         'Flash'
     ),
